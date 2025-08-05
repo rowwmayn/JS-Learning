@@ -1,0 +1,50 @@
+<!DOCTYPE html> <!--Tells the browser to use a modern version of html-->
+
+<html>
+    <head>
+
+        <title>Cart</title>
+
+
+
+</head>
+
+        <body>
+
+            <button onclick="console.log(`Cart Quantity: ${quantity}`);">Show Quantity</button>
+            <button onclick="quantity=quantity+1; console.log(`Cart Quantity: ${quantity}`);">Add to Cart</button>
+            <button onclick="quantity=quantity+2; console.log(`Cart Quantity: ${quantity}`);">+2</button>
+            <button onclick="quantity=quantity+3; console.log(`Cart Quantity: ${quantity}`);">+3</button>
+            <button onclick="quantity=quantity-1; console.log(`Cart Quantity: ${quantity}`);">Remove from Cart</button>
+            <button onclick="quantity=quantity-quantity; console.log(`Cart Quantity: ${quantity} because you removed everything`);">Clear Cart</button>
+            <button onclick="
+            let type = typeof(quantity) ;
+            console.log(`The type of quantity is: ${type}`);
+            
+            
+            
+            ">Show variable type</button>
+
+
+        
+
+<script>
+    //let v1 = 3;
+    //let v2 = 4;
+    //console.log(v1 + v2); // Outputs: 7
+    //console.log("Hello Zebra");
+    let quantity = 0;
+
+</script>
+
+
+
+</body>
+    
+</html>
+
+
+
+
+
+

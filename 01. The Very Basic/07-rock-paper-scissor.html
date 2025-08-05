@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rock Paper Scissor</title>
+</head>
+<body>
+    <h1>Yay we'll play rock paper scissors !!!</h1>
+    <button id="rock" onclick="
+    Random_Num=Math.random(); 
+     
+    if (Random_Num>=0 && Random_Num<=(1/3)) {move = 'Rock'};
+    if (Random_Num>(1/3) && Random_Num<=(2/3)) {move = 'Paper'};
+    if (Random_Num>(2/3) && Random_Num<=1) {move = 'Scissor'};
+
+    if (move === 'Rock'){
+        points+=1;
+        alert('You chose Rock! You win this round!');
+    } else {
+        points-=1;
+        alert(`You chose Rock! But the pc chose ${move} You lose this round! and current points are ${points}`);
+    };
+
+    
+    ">Rock</button>
+    <button id="paper" onclick="
+    Random_Num=Math.random(); 
+     
+    if (Random_Num>=0 && Random_Num<=(1/3)) {move = 'Rock'};
+    if (Random_Num>(1/3) && Random_Num<=(2/3)) {move = 'Paper'};
+    if (Random_Num>(2/3) && Random_Num<=1) {move = 'Scissor'};
+    
+    if (move === 'Paper'){
+        points+=1;
+        alert('You chose Paper! You win this round!');
+    } else {
+        points-=1;
+        alert(`You chose Paaper! But the pc chose ${move} You lose this round! and current points are ${points}`);
+    };
+    
+    ">Paper</button>
+
+    <button id="scissor" onclick="
+    Random_Num=Math.random(); 
+     
+    if (Random_Num>=0 && Random_Num<=(1/3)) {move = 'Rock'};
+    if (Random_Num>(1/3) && Random_Num<=(2/3)) {move = 'Paper'};
+    if (Random_Num>(2/3) && Random_Num<=1) {move = 'Scissor'};
+    if (move === 'Scissor'){
+        points+=1;
+        alert('You chose Scissor! You win this round!');
+    } else {
+        points-=1;
+        alert(`You chose Scissor! But the pc chose ${move} You lose this round! and current points are ${points}`);
+    };
+    
+    ">Scissor</button> 
+    
+    <script>
+        let Random_Num = Math.random();
+        let move = '';
+        let points = 0;
+        if (points === 5){
+            alert('You won the game!');
+            points = 0; // Reset points after winning
+        } else if (points === -5) {
+            alert('You lost the game!');
+            points = 0; // Reset points after losing
+        }
+
+    </script>
+
+</body>
+</html>
