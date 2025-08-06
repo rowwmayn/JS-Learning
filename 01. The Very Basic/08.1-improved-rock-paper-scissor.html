@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Improved Rock Paper Scissors</title>
+</head>
+<body>
+
+    <h1>Let's play rock paper scissors</h1>
+
+    <button onclick=" playerMove='r'
+    game(playerMove, compMove());
+    alert(`You chose Rock! Your score: ${playerScore}, Computer score: ${computerScore}`);
+    
+    ">Rock</button>
+    <button onclick="
+    
+    playerMove='p'
+    game(playerMove, compMove());
+    alert(`You chose Rock! Your score: ${playerScore}, Computer score: ${computerScore}`);
+    "
+    
+    >Paper</button>
+    
+    <button
+    onclick="
+    
+    playerMove='s'
+    game(playerMove, compMove());
+    alert(`You chose Rock! Your score: ${playerScore}, Computer score: ${computerScore}`);
+    ">Scissors</button>
+    
+
+
+    <script>
+
+            let playerScore = 0;
+            let computerScore = 0;
+            let playerMove;
+            
+            function compMove() {
+                const moves =[
+                    'r', // Rock
+                    'p', // Paper
+                    's'  // Scissors
+                ];
+
+                const randomIndex = Math.floor(Math.random() * moves.length);
+                return moves[randomIndex];
+
+            }
+            
+            function game(playerMove, compMove) {
+                
+                if (playerMove === compMove) {
+                    console.log("It's a tie!");
+                } else if (
+                    (playerMove === 'r' && compMove === 's') ||
+                    (playerMove === 'p' && compMove === 'r') ||
+                    (playerMove === 's' && compMove === 'p')
+                ) {
+                    playerScore++;
+                    console.log(`You win! Your score: ${playerScore}, Computer score: ${computerScore}`);
+                } else {
+                    computerScore++;
+                    console.log(`You lose! Your score: ${playerScore}, Computer score: ${computerScore}`);
+                }
+            
+
+            }
+
+    </script>
+
+
+</body>
+</html>
