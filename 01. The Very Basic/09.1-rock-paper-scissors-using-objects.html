@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rock Paper Scissors with Objects</title>
+</head>
+<body>
+
+
+    <button onclick="
+        move=`r`
+        game(move, compMove());
+        alert(`You chose Rock! Your score: ${scores.player}, Computer score: ${scores.computer}`);
+
+
+        ">Rock</button>
+
+    <button onclick="
+        move=`p`
+        game(move, compMove());
+        alert(`You chose Paper! Your score: ${scores.player}, Computer score: ${scores.computer}`);"
+    
+    >Paper</button>
+
+    <button onclick="
+    move=`s`
+    game(move, compMove());
+    alert(`You chose Scissors! Your score: ${scores.player}, Computer score: ${scores.computer}`);
+    ">Scissors</button>
+
+
+
+
+
+    <script>
+        let move ='';
+        const scores = {
+            player: 0,
+            computer: 0
+        };
+
+        const moves = {
+            rock: 'r',
+            paper: 'p',
+            scissors: 's'
+        };
+
+        function compMove() {
+            const randomIndex = Math.floor(Math.random() * Object.keys(moves).length);
+            return Object.values(moves)[randomIndex];
+        }
+
+        function game(playerMove, compMove) {
+            if (playerMove === compMove) {
+                console.log("It's a tie!");
+            } else if (
+                (playerMove === moves.rock && compMove === moves.scissors) ||
+                (playerMove === moves.paper && compMove === moves.rock) ||
+                (playerMove === moves.scissors && compMove === moves.paper)
+            ) {
+                scores.player++;
+                console.log("You win!");
+            } else {
+                scores.computer++;
+                console.log("Computer wins!");
+            }
+        }
+
+
+    </script>
+</body>
+</html>
